@@ -2,37 +2,38 @@ package controllers;
 
 import interfaces.Controlador;
 import models.Request;
+import utils.Car;
 import utils.Product;
 
-public class ProductController implements Controlador {
+public class CarController implements Controlador {
 
     @Override
     public void procesar(Request request) {
 
         String action = request.getAccion();
 
-        Product product = (Product) request.getData();
+        Car vehicle = (Car) request.getData();
 
         switch(action.toLowerCase()) {
 
             case "alta":
 
                 System.out.println(
-                    "Alta del producto: " + product);
+                    "Alta del producto: " +vehicle);
 
                 break;
 
             case "baja":
 
                 System.out.println(
-                    "Baja del producto "+product);
+                    "Baja del producto "+vehicle);
 
                 break;
 
             case "editar":
 
                 System.out.println(
-                    "Editar producto "+ product);
+                    "Editar producto "+vehicle);
 
                 break;
 
