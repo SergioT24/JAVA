@@ -1,13 +1,13 @@
 package controllers;
 
-import interfaces.Controlador;
+import interfaces.Controller;
 import models.Request;
 import utils.Product;
 
-public class ProductController implements Controlador {
+public class ProductController implements Controller {
 
     @Override
-    public void procesar(Request request) {
+    public String procesar(Request request) {
 
         String action = request.getAccion();
 
@@ -17,29 +17,16 @@ public class ProductController implements Controlador {
 
             case "alta":
 
-                System.out.println(
-                    "Alta del producto: " + product);
-
-                break;
-
+                return
+                    "Alta del producto: " + product;
             case "baja":
-
-                System.out.println(
-                    "Baja del producto "+product);
-
-                break;
-
+                return
+                    "Baja del producto "+product;
             case "editar":
-
-                System.out.println(
-                    "Editar producto "+ product);
-
-                break;
-
+                return
+                	"Editar producto "+ product;
             default:
-
-                throw new RuntimeException(
-                        "Accion no soportada");
+            	throw new RuntimeException("Accion no soportada");
         }
     }
 }

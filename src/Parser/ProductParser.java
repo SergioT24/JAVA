@@ -22,7 +22,11 @@ public class ProductParser implements Parser<Product> {
         for(String atributo : atributos) {
 
             String[] keyValue = atributo.split("=");
-
+            
+            if(keyValue.length < 2)
+            {
+            	throw new IllegalArgumentException("Formato inválido en atributo: " + atributo);
+            }
             String key = keyValue[0];
             String value = keyValue[1];
 
@@ -36,8 +40,11 @@ public class ProductParser implements Parser<Product> {
             }
 
             if(key.trim().toLowerCase().equals("precio")) {
-
-            	price = Double.parseDouble(value);
+            	try {
+            	    price = Double.parseDouble(value);
+            	} catch (NumberFormatException e) {
+            	    throw new IllegalArgumentException("Precio inválido: " + value);
+            	}
             }
         }
 

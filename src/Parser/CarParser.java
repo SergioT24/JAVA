@@ -25,6 +25,10 @@ public class CarParser implements Parser<Car> {
 
             String[] keyValue = atributo.split("=");
 
+            if(keyValue.length < 2)
+            {
+            	throw new IllegalArgumentException("Formato inválido en atributo: " + atributo);
+            }
             String key = keyValue[0];
             String value = keyValue[1];
 

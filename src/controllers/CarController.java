@@ -1,14 +1,14 @@
 package controllers;
 
-import interfaces.Controlador;
+import interfaces.Controller;
 import models.Request;
 import utils.Car;
 import utils.Product;
 
-public class CarController implements Controlador {
+public class CarController implements Controller {
 
     @Override
-    public void procesar(Request request) {
+    public String procesar(Request request) {
 
         String action = request.getAccion();
 
@@ -18,24 +18,20 @@ public class CarController implements Controlador {
 
             case "alta":
 
-                System.out.println(
-                    "Alta del producto: " +vehicle);
+                return 
+                    "Alta del producto: " +vehicle;
 
-                break;
 
             case "baja":
 
-                System.out.println(
-                    "Baja del producto "+vehicle);
+                return
+                    "Baja del producto "+vehicle;
 
-                break;
 
             case "editar":
 
-                System.out.println(
-                    "Editar producto "+vehicle);
-
-                break;
+                return
+                    "Editar producto "+vehicle;
 
             default:
 
