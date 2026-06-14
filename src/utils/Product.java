@@ -42,29 +42,4 @@ public class Product {
 		// TODO Auto-generated method stub
 		return "Nombre: "+this.getName()+" Color: "+this.getColor()+" Precio: $"+this.getPrice();
 	}
-	
-	/*
-	 * Protocolo 1:
-	 *producto/editar?color=rojo&stock=4
-	 *Protocolo 2:
-	 *producto/eliminar?color=rojo&stock=4
-	 *Protocolo 3:
-	 *producto/agregar?color=verde&stock=4
-	 *
-	 * Protocolo 4:
-	 *producto/editar?stock=4
-	 *Protocolo 5:
-	 *producto/eliminar?stock=4
-	 *Protocolo 6:
-	 *producto/agregar?stock=4:
-	 *
-	 * Protocolo 7:
-	 *producto/editar?color=verde
-	 *Protocolo 8:
-	 *producto/eliminar?color=verde
-	 *Protocolo 9:
-	 *producto/agregar?color=verde
-	 */
-	
-	
 }
