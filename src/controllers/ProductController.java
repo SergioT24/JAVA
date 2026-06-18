@@ -11,7 +11,7 @@ public class ProductController implements Controller {
 
         String action = request.getAccion();
 
-        Product product = (Product) request.getData();
+        Product product = (Product) request.getParams();
 
         switch(action.toLowerCase()) {
 

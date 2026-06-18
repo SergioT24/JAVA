@@ -1,8 +1,7 @@
 package utils;
 
-public class Product {
+public class Product extends GenericData{
 	
-	private String id;
 	private String name;
 	private String color;
 	private double price;
@@ -39,7 +38,7 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Nombre: "+this.getName()+" Color: "+this.getColor()+" Precio: $"+this.getPrice();
+
+		return super.toString()+ "\n"+"Nombre: "+this.getName()+" Color: "+this.getColor()+" Precio: $"+this.getPrice();
 	}
 }

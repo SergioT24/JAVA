@@ -1,8 +1,8 @@
 package utils;
 
-public class Car {
+public class Car extends GenericData{
+
 	
-	private String id;
 	private String model;
 	private String brand;
 	private String color;
@@ -48,7 +48,8 @@ public class Car {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Marca: "+this.getBrand() +"Modelo: "+this.getModel()+" Color: "+this.getColor()+" Precio: $"+this.getPrice();
+		
+		return super.toString()+ "\n"+"Marca: "+this.getBrand() +"Modelo: "+this.getModel()+" Color: "+this.getColor()+" Precio: $"+this.getPrice();
 	}
 	
 }

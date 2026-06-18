@@ -13,7 +13,7 @@ public class CarController implements Controller {
 
         String action = request.getAccion();
 
-        Car vehicle = (Car) request.getData();
+        Car vehicle = (Car) request.getParams();
 
         switch(action.toLowerCase()) {
 
