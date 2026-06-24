@@ -8,7 +8,7 @@
 	
 	    @Override
 	    public String procesar(Request request) {
-	
+	    	
 	        String action = request.getAccion();
 	
 	        Product product = (Product) request.getParams();

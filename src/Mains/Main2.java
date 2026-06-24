@@ -10,7 +10,7 @@ public class Main2 {
 	NiglioAppBuilder builder = new NiglioAppBuilder();
 	
 	
-	NiglioApp app = builder.addController("auto",carController);		
+	
 	
 	
 	}
